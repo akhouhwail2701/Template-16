@@ -1,0 +1,199 @@
+@use "event-listing.scss" as *;
+@use "index.scss" as *;
+
+.navigation {
+    width: 100%;
+    height: 1250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    >h1 {
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 35px;
+
+        @media (max-width:992px) {
+            font-size: 30px;
+        }
+
+        @media (max-width:767px) {
+            font-size: 25px;
+        }
+    }
+
+    .img {
+        width: 40%;
+        height: 25%;
+        overflow: hidden;
+        border-radius: 30px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            transition-duration: 0.2s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        @media (max-width:992px) {
+            width: 60%;
+        }
+
+        @media (max-width:767px) {
+            width: 80%;
+        }
+    }
+
+    .para {
+        width: 30%;
+        height: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        >h3 {
+            text-transform: capitalize;
+            font-size: 20px;
+        }
+
+        p {
+            color: $p-color;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        @media (max-width:992px) {
+            width: 60%;
+        }
+
+        @media (max-width:767px) {
+            width: 80%;
+        }
+    }
+
+    .detail {
+        width: 30%;
+        height: 15%;
+        background-color: $section-bg-color;
+        border-radius: 25px;
+        padding: 2.5%;
+
+        h3 {
+            text-transform: capitalize;
+            font-size: 20px;
+        }
+
+        .content-detail {
+            width: 100%;
+            height: 70%;
+            margin-top: 5%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            >div {
+                width: 30%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-evenly;
+
+                >label {
+                    text-transform: capitalize;
+                    color: $secondary-color;
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 15px;
+                    text-transform: capitalize;
+                    color: $p-color;
+                }
+            }
+        }
+
+        @media (max-width:992px) {
+            width: 60%;
+        }
+
+        @media (max-width:767px) {
+            width: 80%;
+        }
+    }
+
+    >.contact {
+        width: 30%;
+        height: 20%;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .info {
+            width: 50%;
+            height: 60%;
+            background-color: $secondary-color;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 30px;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 80% 20%;
+
+            .desc {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+
+                p {
+                    color: $white-color;
+                    text-transform: capitalize;
+                    font-size: 12px;
+
+                    &:first-of-type {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .title {
+                background-color: $custom-btn-bg-hover-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-transform: capitalize;
+                color: $white-color;
+                border-bottom-left-radius: inherit;
+                border-bottom-right-radius: inherit;
+                cursor: pointer;
+                transition-duration: 0.2s;
+                font-size: 15px;
+
+                &:hover {
+                    background-color: $custom-btn-bg-color;
+                }
+            }
+        }
+
+        @media (max-width:992px) {
+            width: 60%;
+        }
+
+        @media (max-width:767px) {
+            width: 80%;
+        }
+    }
+}
